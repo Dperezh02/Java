@@ -17,16 +17,25 @@
     String nombre= "jack";
   ```
 
-## IMPRESIÓN EN LA CONSOLA 
+## Impresión en la consola java
   ```java
     int manzanas = 10;
-    System.out.println(manzanas);
+    	System.out.println(manzanas);
     String nombre= "jack";
-    System.out.println(nombre);
+    	System.out.println(nombre);
   ```
-## CONCATENAR
+## Concatenar
   ```java
-    String nombre= "jack";
+    String nombre = "jack";
     nombre = nombre + " florez jimenez";
     nombre = "hola como estas " + nombre;
   ```
+## Low Camel Case y Upper Camel Case
+  ```java
+  // Upper Camel Case
+  public class Examples{
+  }
+  
+  // Low Camel Case
+  String nameEmployee = "Daniela Pérez Henao";
+  ```  
