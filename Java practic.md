@@ -64,5 +64,9 @@
     //Para diferenciarlo de Double colocar una F al final
      float nF = 123.456F;
   ```  
-##Tipos de datos texto
+## Tipos de datos texto
 ### Tenemos char (Ocupa 2 bytes y solo puede almacenar 1 dígito, debemos usar comillas simples en vez de comillas dobles.) y boolean (Son un tipo de dato lógico, solo aceptan los valores true y false. También ocupa 2 bytes y almacena únicamente 1 dígito.)
+  ```java
+    //Despues de java 10 se puede usar la palabra "Var"
+    var nameEmployee = "Daniela Pérez"
+  ```
