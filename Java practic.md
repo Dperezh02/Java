@@ -20,9 +20,9 @@
 ## 4. Impresión en la consola java
   ```java
     int manzanas = 10;
-    	System.out.println(manzanas);
+      System.out.println(manzanas);
     String nombre= "jack";
-    	System.out.println(nombre);
+      System.out.println(nombre);
   ```
 ## 5. Concatenar
   ```java
@@ -104,3 +104,118 @@
     // Volumen de una esfera ( (4/3) * PI * r^3):
     (4/3) * Math.PI * Math.pow(r, 3)
   ```
+## Cast en variables: Estimación y exactitud
+#### Estimación
+  ```java
+    double monthlyDogs = dogsQuantity / 12.0;
+    // monthlyDogs: 2.5 (pero no es posible, ¡no rescatamos medio perrito!)
+
+    int estimatedMonthlyDogs = (int) monthlyDogs;
+    // estimatedMonthlyDogs: 2
+
+    // Recuerda que el casteo no redondea, solo quita los decimales:
+    Math.sqrt(3) // 1.7320508075688772
+    (int) Math.sqrt(3) // 1
+  ```
+#### Exactitud
+  ```java
+    int a = 30;
+    int b = 12;
+
+    a / b // 2
+    (double) a / b // 2.5
+  ```
+## Conversiones Cast
+![I1]()
+  ```java
+    public class PracticaVideos {
+      public static void main(String[] args) {
+        int valorA = 300;
+        int valorB = 45;
+        
+        System.out.println(valorA/valorB); //6
+        System.out.println((double) valorA/valorB); //6.666666666666667
+
+        double c = (double) valorA/valorB;
+
+        System.out.println(c); //6.666666666666667
+      }
+  ```
+## Ejercicios platzi
+  ```java
+      public class PracticaVideos {
+        public static void main(String[] args) {
+            //Ejercicio 1
+            String nombrePadre = "Jhon Fredy";
+            String primer_apellido_padre = " Pérez ";
+            String segundo_apellido_padre = "Bañol";
+            int edadPadre = 42;
+
+            System.out.println("Mi papá se llama " + nombrePadre + primer_apellido_padre + segundo_apellido_padre + ". Y su edad es = " + edadPadre);
+
+            String nombreMadre = "Vivian ";
+            String primer_apellido_madre = "Henao ";
+            String segundo_apellido_madre = "Londoño";
+            int edadMadre = 34;
+
+            System.out.println("Mi mamá se llama " + nombreMadre + primer_apellido_madre + segundo_apellido_madre + ". Y su edad es = " + edadMadre);
+
+            String nombreHermana = "Maria Antonia ";
+            String primer_apellido_Hermana = "Pérez ";
+            String segundo_apellido_Hermana = "Henao";
+            int edadHermana = 8;
+
+            System.out.println("Mi Hermana se llama " + nombreHermana + primer_apellido_Hermana + segundo_apellido_Hermana + ". Y su edad es = " + edadHermana);
+
+            /*char c = ‘z’; conviertelo a int
+            int i = 250; conviertelo a long y luego de long a short
+            double d = 301.067; conviertelo a long
+            int i = 100; súmale 5000.66 y conviertelo a float
+            int i = 737; multiplícalo por 100 y conviertelo a byte
+            double d = 298.638; divídelo entre 25 y conviertelo a long*/
+
+            //Ejercicio 2
+
+            int i = 250;
+            long il = (long) i;
+            System.out.println(il); //250 estimación
+
+            short ils = (short) il;
+            System.out.println(ils); //250 estimación
+
+            double d = 301.067;
+            long dl = (long) d;
+            System.out.println(dl); //301 exactitud
+
+            int iI = 100;
+            float iF = (float) (iI + 5000.66);
+            System.out.println(iF); // 5100.66 estimación 
+
+            int a = 737;
+            System.out.println((byte) a*100); //-3100 estimación
+
+            double b = 298.638;
+            double b_operation = b/25;
+            System.out.println((long) b_operation); //11 exactitud
+
+        }
+    }
+  ```
+## if en java 
+  ```java
+    boolean tiempo = true;
+    boolean energia = true;
+      
+    if(tiempo && energia){
+    System.out.println("Pues ponte a estudiar el Curso de Introducción a Java SE con Anahí Salgado en Platzi");
+    } else {
+      System.ou.println("Ve a terminar tus haceres y vuelve para estudiar")
+    }
+  ```
+## Alcance y Scope de las variables 
+### es que existen dos tipos de declaracion para variables:
+
+##### Las variables globales: Se definen antes de entrar a una funcion o proceso y que como su nombre indica pueden ser llamadas a procesos en cualquier lugar ya que fueron previamente declaradas. (USO PUBLICO PODRIA DECIRSE)
+
+##### Las variables locales: Son las que se definen para un proceso en especifico en un funcion especifica y solo van a ser reconocidas para esa funcion o proceso, es decir que si intentamos hacer la llamada a una variable local en otra funcion que no sea la de origen no la reconocera como declarada.(USO PRIVATIZADO)
+
