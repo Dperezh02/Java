@@ -218,4 +218,55 @@
 ##### Las variables globales: Se definen antes de entrar a una funcion o proceso y que como su nombre indica pueden ser llamadas a procesos en cualquier lugar ya que fueron previamente declaradas. (USO PUBLICO PODRIA DECIRSE)
 
 ##### Las variables locales: Son las que se definen para un proceso en especifico en un funcion especifica y solo van a ser reconocidas para esa funcion o proceso, es decir que si intentamos hacer la llamada a una variable local en otra funcion que no sea la de origen no la reconocera como declarada.(USO PRIVATIZADO)
+![I1]()
 
+## Operadores logicos
+  ```java
+  Operadores de equidad:
+
+   - Igualdad: ==
+   - Desigualdad: !=
+
+  Operadores Relacionales:
+
+   - Menor que: <
+   - Mayor que: >
+   - Menor o igual que: <=
+   - Mayor o igual que: >=
+  
+  Operadores lógicos:
+
+   - &&: AND (evaluar si dos o más condiciones son verdaderas).
+   - ||: OR (evaluar si al menos una de las condiciones es verdadera).
+   - !: NOT (evaluar que la condición NO sea verdadera).
+  ```
+  ![I1]() 
+
+## Estrucura if / else if 
+  ```java
+    if (condición) {
+      instrucciones
+    } else if (condcion) {
+      instrucciones
+    } else {
+      instrucciones
+    }
+  ```
+## Sentencia Switch
+  ```java
+  String fruta = "Mangostino";
+  switch (fruta){
+    case "Mango":
+      System.out.println("¡Mi fruta favorita es el mango!");
+      break;
+    case "Lulo":
+      System.out.println("¡Mi fruta favorita es el lulo!");
+      break;
+    case "Mangostino":
+      System.out.println("Mi fruta favorita es el mangostino");
+      break;
+    default:
+      System.out.println("¡no hay frutas!");
+      break;
+  }
+  ```
