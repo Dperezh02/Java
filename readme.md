@@ -1,42 +1,42 @@
 # JAVA
 
-## 1. Declaraciones en java
+## Declaraciones en java
   ```java
     int manzanas;
     String nombre;
   ```
-## 2. Asignacion
+## Asignacion
   ```java
     manzanas = 10;
     nombre = "jack";
   ```
 
-## 3. Declaracion y asignacion
+## Declaracion y asignacion
   ```java
     int manzanas = 10;
     String nombre= "jack";
   ```
 
-## 4. Impresión en la consola java
+## Impresión en la consola java
   ```java
     int manzanas = 10;
       System.out.println(manzanas);
     String nombre= "jack";
       System.out.println(nombre);
   ```
-## 5. Concatenar
+## Concatenar
   ```java
     String nombre = "jack";
     nombre = nombre + " florez jimenez";
     nombre = "hola como estas " + nombre;
   ```
-## 6. Constantes en java
+## Constantes en java
   ```java
     String LAST_NAME = "Pérez";
     int ID_NUMBER = 1;
   ```
 
-## 7. Low Camel Case y Upper Camel Case
+## Low Camel Case y Upper Camel Case
   ```java
     // Upper Camel Case
     public class ExamplesTest {
@@ -45,9 +45,9 @@
     // Low Camel Case
     String nameEmployee = "Daniela Pérez Henao";
   ```  
-## 8. Tipos de datos númericos
-### 8.1. Existe byte (ocupa 1 byte en la memoria RAM) short (ocupa 2 byte en la memoria) int (4 byte) long (8 byte).
-### 8.2. Para el caso de puntos decimal java usa dos tipos de datos double (8 byte - para calculos matematicos que necesitan mucha precisión) y float (4 byte) 
+## Tipos de datos númericos
+#### 1. Existe byte (ocupa 1 byte en la memoria RAM) short (ocupa 2 byte en la memoria) int (4 byte) long (8 byte).
+#### 2. Para el caso de puntos decimal java usa dos tipos de datos double (8 byte - para calculos matematicos que necesitan mucha precisión) y float (4 byte) 
 ![I1](https://github.com/Dperezh02/Java/blob/master/Imagenes%20de%20referencia/Tipo%20de%20datos%20numericos.png)
 ![I1](https://github.com/Dperezh02/Java/blob/master/Imagenes%20de%20referencia/Tipos%20de%20datos%20numericos.png)
 
@@ -64,8 +64,8 @@
     //Para diferenciarlo de Double colocar una F al final
      float nF = 123.456F;
   ```  
-## 9. Tipos de datos texto
-### Tenemos char (Ocupa 2 bytes y solo puede almacenar 1 dígito, debemos usar comillas simples en vez de comillas dobles.) y boolean (Son un tipo de dato lógico, solo aceptan los valores true y false. También ocupa 2 bytes y almacena únicamente 1 dígito.)
+## Tipos de datos texto
+#### Tenemos char (Ocupa 2 bytes y solo puede almacenar 1 dígito, debemos usar comillas simples en vez de comillas dobles.) y boolean (Son un tipo de dato lógico, solo aceptan los valores true y false. También ocupa 2 bytes y almacena únicamente 1 dígito.)
   ```java
     //Despues de java 10 se puede usar la palabra "Var"
     var nameEmployee = "Daniela Pérez"
