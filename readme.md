@@ -126,7 +126,7 @@
     (double) a / b // 2.5
   ```
 ## Conversiones Cast
-![I1]()
+![I1](https://github.com/Dperezh02/Java/blob/master/Imagenes%20de%20referencia/Casteo%20de%20datos.png)
   ```java
     public class PracticaVideos {
       public static void main(String[] args) {
@@ -218,7 +218,7 @@
 ##### Las variables globales: Se definen antes de entrar a una funcion o proceso y que como su nombre indica pueden ser llamadas a procesos en cualquier lugar ya que fueron previamente declaradas. (USO PUBLICO PODRIA DECIRSE)
 
 ##### Las variables locales: Son las que se definen para un proceso en especifico en un funcion especifica y solo van a ser reconocidas para esa funcion o proceso, es decir que si intentamos hacer la llamada a una variable local en otra funcion que no sea la de origen no la reconocera como declarada.(USO PRIVATIZADO)
-![I1]()
+![I1](https://github.com/Dperezh02/Java/blob/master/Imagenes%20de%20referencia/Scope%20de%20las%20variables.png)
 
 ## Operadores logicos
   ```java
@@ -240,7 +240,7 @@
    - ||: OR (evaluar si al menos una de las condiciones es verdadera).
    - !: NOT (evaluar que la condición NO sea verdadera).
   ```
-  ![I1]() 
+  ![I1](https://github.com/Dperezh02/Java/blob/master/Imagenes%20de%20referencia/Operadores%20logicos%20-%20tabla%20de%20la%20verdad.png) 
 
 ## Estrucura if / else if 
   ```java
