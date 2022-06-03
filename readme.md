@@ -220,7 +220,7 @@
 #### palabra clave cuando una función no tiene un valor de regreso.
 ### • Nota: 
 #### si nuestras funciones van a devolver argumentos, lo mejor es que especifiques el tipo de dato que serán. Para utilizar nuestras funciones solo debemos asignar el resultado de la función y sus parámetros a una variable con el mismo tipo de dato de la función.
-![I1]() 
+![I1](https://github.com/Dperezh02/Java/blob/master/Imagenes%20de%20referencia/Funciones.png) 
 
 ## Implementación función 
  ```java
@@ -242,3 +242,5 @@ public static double suma(double numeroUno, double numeroDos){
 }
 return quantity;
   ```
+## Tags Java Docs
+![I1]() 
