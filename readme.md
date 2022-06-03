@@ -221,3 +221,24 @@
 ### • Nota: 
 #### si nuestras funciones van a devolver argumentos, lo mejor es que especifiques el tipo de dato que serán. Para utilizar nuestras funciones solo debemos asignar el resultado de la función y sus parámetros a una variable con el mismo tipo de dato de la función.
 ![I1]() 
+
+## Implementación función 
+ ```java
+public static double suma(double numeroUno, double numeroDos){
+  int suma = numeroUno + numeroDos;
+
+  return suma; 
+}
+  ```
+ ```java
+ public static double conversorDeDolar(double quantity, String currency){
+  switch (currency);
+    case "COP":
+      quantity = quantity * 0.00031;
+      break;
+    case "EUR":
+      quantity = quantity * 0,00025;
+      break;
+}
+return quantity;
+  ```
