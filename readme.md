@@ -223,24 +223,206 @@
 ![I1](https://github.com/Dperezh02/Java/blob/master/Imagenes%20de%20referencia/Funciones.png) 
 
 ## Implementación función 
- ```java
-public static double suma(double numeroUno, double numeroDos){
-  int suma = numeroUno + numeroDos;
+  ```java
+    public static double suma(double numeroUno, double numeroDos){
+      int suma = numeroUno + numeroDos;
 
-  return suma; 
-}
+      return suma; 
+    }
   ```
- ```java
- public static double conversorDeDolar(double quantity, String currency){
-  switch (currency);
-    case "COP":
-      quantity = quantity * 0.00031;
-      break;
-    case "EUR":
-      quantity = quantity * 0,00025;
-      break;
-}
-return quantity;
+  ```java
+    public static double conversorDeDolar(double quantity, String currency){
+      switch (currency);
+        case "COP":
+          quantity = quantity * 0.00031;
+          break;
+        case "EUR":
+          quantity = quantity * 0,00025;
+          break;
+    }
+    return quantity;
   ```
 ## Tags Java Docs
-![I1]() 
+![I1](https://github.com/Dperezh02/Java/blob/master/Imagenes%20de%20referencia/Tags%20java%20Docs.png) 
+
+## Tags 
+  ```java
+    /**
+     *Descripción: funcion que especificando la moneda convierte una cantidad de dinero a dolares // Descripción general de nuestra función. 
+     * 
+     * @param quantity Cantidad de dinero // Descripción del parámetro quanity.
+     * @param currency Tipo de moneda: solo acepta COP o EUR // Descripción del parámetro currency (MXN o COP).
+     * @return Devuelve la cantidad actualizada en dolares// Descripción del valor que devolvemos en esta función.
+     * */
+    public static double conversorDeDolar(double quantity, String currency){
+      switch (currency);
+        case "COP":
+          quantity = quantity * 0.00031;
+          break;
+        case "EUR":
+          quantity = quantity * 0,00025;
+          break;
+    }
+    return quantity;
+  ```
+#### Para activar la visibilidad de la documentación en Windows:
+  ```java
+    File > Settings > Editor > General > Code Completion 
+    y pasas a activar la opción 
+    "Show the documentation popup in 1000 ms" 
+    y por ultimo le das a OK
+  ```
+## Bucle Do While
+#### Primero se ejecuta y luego se evalua la condición
+  ```java
+    do {
+      //Instrucciones
+    } while (condicion);
+  ```
+#### Ejemplo:
+  ```java
+    int respuesta = 0;
+
+    do {
+      System.out.println("Bienvenida Daniela, seleccione la opción deseada");
+      System.out.println("1. Peliculas");
+      System.out.println("2. Musica");
+      System.out.println("3. salir");
+
+      Scanner in = new Scanner(System.in);
+      respuesta = Integer.valueOf(in.nextLine());
+
+      switch (respuesta) {
+          case 1:
+              System.out.println("Estas son las peliculas disponibles, Casa fantasmas, el ataque, que paso ayer");
+              break;
+          case 2:
+              System.out.println("Esta es la musica disponible, Pop, Ballenato, Salsa");
+              break;
+          case 3:
+              System.out.println("Gracias por visitarnos");
+              break;
+          default:
+              System.out.println("Selecciona una respuesta correcta");
+      }
+    } while (respuesta != 3);
+    System.out.println("Gracias por visitarnos");
+  ```
+## Bucle While
+#### Primero se ejecuta la condición y luego se ejecuta
+  ```java
+  while (condicion) {
+    //instrucciones
+  }
+  ```
+#### Ejemplo:
+  ```java
+    int x = 1;
+
+      // Salir cuando x llega a ser mayor que 4
+      while (x <= 4)
+      {
+          System.out.println("Valor de x: " + x);
+
+          //incrementa el valor de x para la siguiente iteración
+          x++;
+      }
+  ```
+## Bucle for
+  ```java
+    for (inicializacion;condicion;incremento) {
+      //Instrucciones
+    }
+  ```
+#### Ejemplo
+  ```java
+    public static void main(String[] args) {
+          turnOnOffLight();
+
+          for (int i = 1; i <= 10; i++) {
+              
+          }
+      }
+      public static void printSOS(){
+          System.out.println(". . . _ _ _ . . .");
+      }
+      public static boolean turnOnOffLight(){
+          isTurnOnLight = (isTurnOnLight)?false:true;
+          return isTurnOnLight;
+      }
+  ```
+## Arrays
+#### Los arreglos o arrays son objetos en los que podemos guardar más de una variable.
+#### Los arrays se definen en código de las siguientes maneras:
+  ```java
+    // 1. Definir el nombre de la variable y el tipo de datos
+    //  que va a contener, cualquiera de las siguientes dos
+    // opciones es válida:
+    TipoDato[] nombreVariable;
+    TipoDato nombreVariable[];
+
+    // 2. Definir el tamaño del array, la cantidad de elementos
+    // que podemos guardar en el array:
+    TipoDato[] nombreVariable = new TipoDato[capacidad];
+
+    // Array de dos dimensiones:
+    TipoDato[][] cities = new String[númeroFilas][númeroColumnas];
+  ```
+#### Declarando arreglos
+  ```java
+    String[][] cities = new String[4][2];
+
+    //Tres dimensiones
+    String[][][] cities = new String[3][2][2];
+  ```
+## Indices y búsqueda de elementos en Arrays
+#### Los índices son variables simples que nos ayudan a identificar las posiciones en un arreglo. Estas variables siempre guardan números, comienzan en 0 e incrementan de abajo a arriba y de izquierda a derecha.
+
+#### Para guardar un valor en alguna posición de nuestro array solo debemos usar el índice de la siguiente forma:
+  ```java
+    //[filas][columnas]
+    cities[0][0] = "Colombia";
+    cities[1][0] = "Colombia";
+    cities[2][0] = "Mexico";
+    cities[3][0] = "Mexico";
+    cities[0][1] = "Medellin";
+    cities[1][1] = "Bogota";
+    cities[2][1] = "Guadalajara";
+    cities[3][1] = "CDMX";
+
+    System.out.println(cities[0][0]);
+    System.out.println(cities[0][1]);
+    System.out.println(cities[1][0]);
+    System.out.println(cities[1][1]);
+    System.out.println(cities[2][0]);
+    System.out.println(cities[2][1]);
+    System.out.println(cities[3][0]);
+    System.out.println(cities[3][1]);
+  ```
+## Ciclos for anidados
+  ```java
+    // Array de una sola dimensión:
+    for (int i = 0; i <= 3; i++) {
+      System.out.println(i);
+    }
+    // El resultado será: 0, 1, 2, 3
+
+    // Array de dos dimensiones:
+    for (int filas = 0; filas < cities.length; filas++) {
+      for (int columnas = 0; columnas < cities[filas].length; columnas++) {
+        System.out.println(cities[filas][columnas]);
+      }
+    }
+    // El resultado será:
+    // Colombia
+    // Bogotá
+    // México
+    // Guadalajara
+    // España
+    // Madrid
+  ```
+## Bucle Do While
+  ```java
+  ```
+
+
