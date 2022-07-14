@@ -1,17 +1,17 @@
-# JAVA
+# INTRODUCCIÓN A JAVA
 
 ## Declaraciones en java
   ```java
     int manzanas;
     String nombre;
   ```
-## Asignacion
+## Asignación
   ```java
     manzanas = 10;
     nombre = "jack";
   ```
 
-## Declaracion y asignacion
+## Declaración y asignación
   ```java
     int manzanas = 10;
     String nombre= "jack";
@@ -399,6 +399,44 @@
     System.out.println(cities[3][0]);
     System.out.println(cities[3][1]);
   ```
+## Imprimir en consola un arreglo
+  ```java
+    import java.util.Scanner;
+    import java.util.Arrays;
+    //Se debe de importar la libreria util.Arrays
+    public class DoWhile {
+
+        public static void main(String[] args) {
+
+            System.out.println("--- Creemos una lista ---");
+
+            System.out.println("Digite un número");
+            Scanner num = new Scanner(System.in);
+            int numeroInicial = num.nextInt();
+
+            //TipoDeDato / nombre = new tipoDeDato[Capacidad]
+            String[] list = new String[numeroInicial]; // la capacidad es el número que tomamos del scanner pues este puede ser aleatorio seleccionado por el humano.
+            /*[ , , , ]
+               0 1 2 3 */
+            int acomulador = 0; // Se crea una variable inicializada en 0 para ir incrementando hasta llegar al numero ingresado desde el scanner
+            while (acomulador < numeroInicial) {
+                System.out.println("Digite la palabra");
+                Scanner pl = new Scanner(System.in);
+                String palabra = pl.nextLine(); // un scanner para ir guardando las palabras ingresadas
+
+                //0 ciclo
+                        //1 ciclo
+                                //2 ciclo
+                                        //3 ciclo
+                list[acomulador]= palabra; //Se pone acumulador pues va recorriendo cada ciclo y en cada recorrido va a ir guardando la palabra que fue ingresada en el scanner
+
+                acomulador++; //va incrementando + 1 hasta llegar al numero inicial 
+            }
+            System.out.println(Arrays.toString(list)); //Arrays clase que tiene un metodo toString; coge un arreglo y lo permite visualizar en consola.
+        }
+    }
+
+  ```
 ## Ciclos for anidados
   ```java
     // Array de una sola dimensión:
@@ -421,8 +459,6 @@
     // España
     // Madrid
   ```
-## Bucle Do While
-  ```java
-  ```
+
 
 
