@@ -90,3 +90,59 @@
 	}
 
 ```
+### Main
+```java
+	 public static void main(String[] args) {
+	        /*Crea una clase llamado cuenta que tendrá los siguientes atributos:
+	        titular (que es nombre de la persona) y cantidad. El titular será obligatorio y la cantidad es opcional.
+	        Construye los siguientes métodos para el metodo:
+	        2.1 mostrar(): Muestra los datos de la cuenta.
+	        2.2 ingresar(cantidad): se ingresa una cantidad a la cuenta, si la cantidad introducida es negativa, no se hará nada.
+	        2.3 retirar(cantidad): se retira una cantidad a la cuenta. La cuenta puede estar en números rojos.*/
+
+	        System.out.println("Bienvenido al sistema");
+	        Cuenta cuenta = new Cuenta("Daniela Pérez Henao");
+	        cuenta.mostrar();
+	        cuenta.ingresar(20000);
+	        cuenta.retirar();
+	        cuenta.mostrar();
+	        cuenta.ingresar(34000);
+	        cuenta.mostrar();
+	    }
+```
+
+### Clase
+```java
+	public class Cuenta {
+	    String titular; //obligatorio
+	    int cantidad; //Opcional
+
+	    public Cuenta(String titular) {
+	        this.titular = titular;
+	    }
+
+	    public void mostrar(){
+	        System.out.println("Estos son los datos de la cuenta seleccionada---> " + " Titular de la cuenta: " + this.titular + ", Saldo disponible: " + this.cantidad);
+	    }
+
+	    void ingresar(int ingresarDinero){
+
+	        this.cantidad = (ingresarDinero + this.cantidad);
+	            System.out.println("Saldo diponible: " + this.cantidad);
+
+	    }
+	    void retirar(){
+	        System.out.println("Ingrese la cantidad de dinero a retirar:");
+	        Scanner sacar = new Scanner(System.in);
+	        int sacarDinero = sacar.nextInt();
+
+	        this.cantidad = (this.cantidad - sacarDinero);
+
+	        System.out.println("Saldo disponible: " + this.cantidad);
+	        if (this.cantidad < 0) {
+	            System.out.println("El saldo esta en mora");
+	        }
+	    }
+	}
+
+```
