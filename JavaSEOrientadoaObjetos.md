@@ -245,3 +245,5 @@ public class Main {
     }
 }
 ```
+### Aplicando polimorfismo en lenguaje Java
+El polimorfismo es cambiar la estructura o comportamiento de un metodo que proviene de una clase padre 

@@ -136,3 +136,38 @@ Las sub clases seran Uberx, uberPool, UberBlack y UberVan
 #### Modelo Completo UML
 
 ![I1](https://github.com/Dperezh02/Java/blob/master/Imagenes%20de%20referencia/EjemploHerencia6.png)
+
+## Variables de tipo Static (Elementos Static)
+el elemento static permite el acceso a métodos y variables de clase sin la necesidad de instanciar un objeto de dicha clase, permitiendo la inicialización de forma cómoda
+
+En muchos casos nuestro código necesita ejecutar métodos que no necesariamente deben pertenecer a un objeto o instancia en concreto, ya que pueden ser muy generales (así como Math.Random) o los valores que almacenamos deben ser los mismos, sin importar si los consumimos desde una o más clases.
+
+**Ejemplo:**
+```java
+public class Doctor {
+    //Atributos
+    int id;
+    String name;
+    String speciality;
+
+    Doctor(){
+        System.out.println("Construyendo el Objeto Doctor");
+    }
+
+    Doctor(String name){
+        System.out.println("El nombre del Doctor asignado es: " + name);
+    }
+
+    //Comportamientos
+    public void showName(){
+        System.out.println(name);
+    }
+
+} 
+```
+## Variable vs. Objeto
+Las Variables son entidades elementales muy sencillas, pueden ser números, caracteres, booleanos, entre otras. Los Objetos son entidades complejas que pueden estar formadas por la agrupación de diferentes variables y métodos.
+
+Los Objetos Primitivos o Clases Wrapper son variables primitivas que trabajan con algún tipo de dato y también tienen las características de los objetos.
+
+Por ejemplo: Byte, Short, Integer, Long, Float, Double, Character, Boolean o String.

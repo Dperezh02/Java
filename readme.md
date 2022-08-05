@@ -1,5 +1,10 @@
 # INTRODUCCIÓN A JAVA
 
+## Variables en java 
+Una variable nos va a permitir almacenar información y se llama variable dado que en cualquier momento el contenido de esta pueda cambiar, nuestras variables pueden almacenar diferentes tipos de datos como por ejemplo, **Numericos**, **Textos** o **Cadenas**.
+
+En java exiten dos diferentes tipos de datos de tipo **Primitivos** y **Referenciados** (Tipo object (Clases, interfaces, arrays))
+
 ## Declaraciones en java
   ```java
     int manzanas;
@@ -7,6 +12,7 @@
   ```
 ## Asignación
   ```java
+  // Después del igual a ese dato se le llama "literal".
     manzanas = 10;
     nombre = "jack";
   ```
@@ -14,21 +20,63 @@
 ## Declaración y asignación
   ```java
     int manzanas = 10;
-    String nombre= "jack";
+    String nombre = "jack";
   ```
-
-## Impresión en la consola java
+Apartir de la versión 10 de java podemos usar la palabra reservada **VAR** en lugar de usar el tipo de dato definido, podemos simplemente poner var para que java infiera el tipo de dato que estamos utilizando.
+  ```java
+  // var - inferencia en tipo de datos segun la literal que se le proporcione.
+    var manzanas = 10;
+    var nombre = "jack";
+  ```
+## Impresión en la consola java (sout)
   ```java
     int manzanas = 10;
-      System.out.println(manzanas);
+    System.out.println(manzanas);
+    
     String nombre= "jack";
-      System.out.println(nombre);
+    System.out.println(nombre);
   ```
-## Concatenar
+## Concatenación de variables 
   ```java
     String nombre = "jack";
     nombre = nombre + " florez jimenez";
     nombre = "hola como estas " + nombre;
+  ```
+  ```java
+    String usuario = "Juan";
+    String titulo = "Ingeniero";
+    String union = titulo + " " + usuario;
+    System.out.println("union = " + union);
+        
+    int i = 3;
+    int j = 4;
+        
+    System.out.println(i + j);//se realiza la suma de numeros (7)
+    System.out.println(i + j + usuario); //Evaluación de izq a der, realiza suma (7Juan)
+    System.out.println(usuario + i + j);//contexto cadena, todo es una cadena (Juan34)
+    System.out.println(usuario + (i + j));//uso de parentesis modifican la prioridad en la evaluación (Juan7)  
+  ```
+## caracteres especiales
+  ```java
+    String nombre = "Karla";
+
+      System.out.println("Nueva linea: \n" + nombre);
+      System.out.println("Tabulador: \t" + nombre);
+      System.out.println("Retroceso: \b\b" + nombre);
+      System.out.println("Comilla simple: \'" + nombre + "\'");
+      System.out.println(" Comilla doble: \"" + nombre + "\"");
+  ```
+## Clase Scanner en java
+  ```java
+    System.out.println("Escribe tu nombre:");
+
+    Scanner consola = new Scanner(System.in); 
+    String usuario = consola.nextLine();
+    System.out.println("usuario = " + usuario);
+    
+    System.out.println("Escribe el titulo:");
+    String titulo = consola.nextLine();
+    System.out.println("Resultado: " + titulo + " " + usuario); 
   ```
 ## Constantes en java
   ```java
@@ -46,11 +94,17 @@
     String nameEmployee = "Daniela Pérez Henao";
   ```  
 ## Tipos de datos númericos
-#### 1. Existe byte (ocupa 1 byte en la memoria RAM) short (ocupa 2 byte en la memoria) int (4 byte) long (8 byte).
-#### 2. Para el caso de puntos decimal java usa dos tipos de datos double (8 byte - para calculos matematicos que necesitan mucha precisión) y float (4 byte) 
+1. Existe byte (ocupa 1 byte en la memoria RAM) short (ocupa 2 byte en la memoria) int (4 byte) long (8 byte).
+2. Para el caso de puntos decimal java usa dos tipos de datos double (8 byte - para calculos matematicos que necesitan mucha precisión) y float (4 byte) 
 ![I1](https://github.com/Dperezh02/Java/blob/master/Imagenes%20de%20referencia/Tipo%20de%20datos%20numericos.png)
 ![I1](https://github.com/Dperezh02/Java/blob/master/Imagenes%20de%20referencia/Tipos%20de%20datos%20numericos.png)
-
+Por un lado tenemos los tipos enteros, entre los cuales tenemos el tipo byte el cual ocupa 8 bits.
+Posteriormente tenemos el tipo short, el cual ocupa 16 bits. También tenemos el tipo char, el cual ocupa
+16 bits pero maneja el código UNICODE para almacenar valores tipo char. A su vez tenemos el tipo int el cual ocupa 32 bits, y finalmente el tipo long el cual ocupa 64 bits.
+Por otro lado tenemos los tipos flotantes, por un lado el tipo float el cual ocupa 32 bits, y el tipo double
+que ocupa 64 bits. El tipo boolean en Java también es un tipo primitivo y puede almacenar sólo el valor de
+true o false. Su valor por default es false.
+![I1]()
   ```java
     // Numero entero (max. 10 numeros)
     int n = 1234567890;
