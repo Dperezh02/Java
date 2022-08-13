@@ -56,7 +56,7 @@ Apartir de la versión 10 de java podemos usar la palabra reservada **VAR** en l
     System.out.println(usuario + i + j);//contexto cadena, todo es una cadena (Juan34)
     System.out.println(usuario + (i + j));//uso de parentesis modifican la prioridad en la evaluación (Juan7)  
   ```
-## caracteres especiales
+## Caracteres especiales
   ```java
     String nombre = "Karla";
 
@@ -69,13 +69,13 @@ Apartir de la versión 10 de java podemos usar la palabra reservada **VAR** en l
 ## Clase Scanner en java
   ```java
     System.out.println("Escribe tu nombre:");
-
-    Scanner consola = new Scanner(System.in); 
-    String usuario = consola.nextLine();
+    
+    Scanner consola = new Scanner(System.in); // Puede llamarse el Scanner 1 vez 
+    String usuario = consola.nextLine(); // usarse en esta linea
     System.out.println("usuario = " + usuario);
     
     System.out.println("Escribe el titulo:");
-    String titulo = consola.nextLine();
+    String titulo = consola.nextLine(); // Y volver a reutilizarse en esta linea
     System.out.println("Resultado: " + titulo + " " + usuario); 
   ```
 ## Constantes en java
@@ -94,17 +94,21 @@ Apartir de la versión 10 de java podemos usar la palabra reservada **VAR** en l
     String nameEmployee = "Daniela Pérez Henao";
   ```  
 ## Tipos de datos númericos
-1. Existe byte (ocupa 1 byte en la memoria RAM) short (ocupa 2 byte en la memoria) int (4 byte) long (8 byte).
-2. Para el caso de puntos decimal java usa dos tipos de datos double (8 byte - para calculos matematicos que necesitan mucha precisión) y float (4 byte) 
+#### 1. Existe byte (ocupa 1 byte en la memoria RAM) short (ocupa 2 byte en la memoria) int (4 byte) long (8 byte).
+#### 2. Para el caso de puntos decimal java usa dos tipos de datos double (8 byte - para calculos matematicos que necesitan mucha precisión) y float (4 byte).
+
 ![I1](https://github.com/Dperezh02/Java/blob/master/Imagenes%20de%20referencia/Tipo%20de%20datos%20numericos.png)
 ![I1](https://github.com/Dperezh02/Java/blob/master/Imagenes%20de%20referencia/Tipos%20de%20datos%20numericos.png)
-Por un lado tenemos los tipos enteros, entre los cuales tenemos el tipo byte el cual ocupa 8 bits.
+
+#### Por un lado tenemos los tipos enteros, entre los cuales tenemos el tipo byte el cual ocupa 8 bits.
 Posteriormente tenemos el tipo short, el cual ocupa 16 bits. También tenemos el tipo char, el cual ocupa
 16 bits pero maneja el código UNICODE para almacenar valores tipo char. A su vez tenemos el tipo int el cual ocupa 32 bits, y finalmente el tipo long el cual ocupa 64 bits.
 Por otro lado tenemos los tipos flotantes, por un lado el tipo float el cual ocupa 32 bits, y el tipo double
 que ocupa 64 bits. El tipo boolean en Java también es un tipo primitivo y puede almacenar sólo el valor de
 true o false. Su valor por default es false.
-![I1]()
+
+![I1](https://github.com/Dperezh02/Java/blob/master/Imagenes%20de%20referencia/Tipo%20primitivos.png)
+
   ```java
     // Numero entero (max. 10 numeros)
     int n = 1234567890;
@@ -113,16 +117,90 @@ true o false. Su valor por default es false.
      long nL = 12345678901L;
 
     //Numero grande en decimales
-     double nD = 123.456;
+     double nD = git123.456;
 
     //Para diferenciarlo de Double colocar una F al final
      float nF = 123.456F;
   ```  
-## Tipos de datos texto
-#### Tenemos char (Ocupa 2 bytes y solo puede almacenar 1 dígito, debemos usar comillas simples en vez de comillas dobles.) y boolean (Son un tipo de dato lógico, solo aceptan los valores true y false. También ocupa 2 bytes y almacena únicamente 1 dígito.)
   ```java
-    //Despues de java 10 se puede usar la palabra "Var"
-    var nameEmployee = "Daniela Pérez"
+    byte numeroByte = 10;
+    System.out.println("Valor byte:" + numeroByte);
+    // MIN_VALUE es una constante la cual nos trae el valor minimo de Byte
+    System.out.println("Valor minimo byte:" + Byte.MIN_VALUE);
+    // MAX_VALUE es una constante la cual nos trae el valor maximo de Byte
+    System.out.println("Valor maximo byte:" + Byte.MAX_VALUE);
+    // Rango de byte -128 a 127
+
+    /* Si queremos asignar el valor 129 nos va a salir un error pues se sale del rango de byte, entonces lo que podemos hacer es obligar al copilador a convertir ese número entero (129) a un tipo byte con la siguiente sintaxis; sin embargo al impimir nuestra variable no almacena el valor (129)*/
+    byte numeroByte = (byte) 129;
+  ``` 
+## Tipos de datos texto
+#### También tenemos el tipo char, el cual ocupa 16 bits pero maneja el código UNICODE para almacenar valores tipo char y solo puede almacenar 1 dígito, debemos usar comillas simples en vez de comillas dobles.
+En esta página podemos encontrar la lista de Unicode characters.(https://en.wikipedia.org/wiki/List_of_Unicode_characters)
+  ```java
+  char miCaracter = 'a';
+  System.out.println("miCaracter = " + miCaracter);
+  //miCaracter = a
+
+  // Simbolo unicode - \u      
+  char varChar = '\u0021';
+  System.out.println("varChar = " + varChar);
+  //varChar = !
+        
+  char varCharDecimal = 33;
+  System.out.println("varCharDecimal = " + varCharDecimal);
+  //varCharDecimal = !
+        
+  char varCharSimbolo = '!';
+  System.out.println("varCharSimbolo = " + varCharSimbolo);
+  //varCharSimbolo = !
+        
+  var varChar1 = '\u0021';
+  System.out.println("varChar1 = " + varChar1);
+  //varChar1 = !
+        
+  var varCharDecimal2 = 33;
+  System.out.println("varCharDecimal2 = " + varCharDecimal2);
+  //varCharDecimal2 = 33
+        
+  var varCharSimbolo3 = '!';
+  System.out.println("varCharSimbolo3 = " + varCharSimbolo3);
+  //varCharSimbolo3 = !
+        
+  int variableEnteraSimbolo = '!';
+  System.out.println("variableEnteraSimbolo = " + variableEnteraSimbolo);
+  //variableEnteraSimbolo = 33
+        
+  int letra = 'A';
+  System.out.println("letra = " + letra);
+  //letra = 65
+  ```  
+#### y boolean (Son un tipo de dato lógico, solo aceptan los valores true y false. También ocupa 2 bytes y almacena únicamente 1 dígito.)
+  ```java
+  public class HolaMundo {
+    public static void main(String args[]) {
+       boolean varBoolean = true;
+       System.out.println("varBoolean = " + varBoolean);
+        
+       if(varBoolean){
+           System.out.println("La bandera es verdadera");
+       } 
+       else{
+           System.out.println("La bandera es falsa");
+       }
+       
+       System.out.println("-------------------");
+
+       var edad = 10;
+       //var esAdulto = edad >= 18;
+       if( edad >= 18 ){
+           System.out.println("Eres mayor de edad");
+       }
+       else{
+           System.out.println("Eres menor de edad");
+       }
+    }
+}
   ```
 ## Operadores
 ### Asignación 
@@ -132,10 +210,14 @@ true o false. Su valor por default es false.
     *=: a *= b es equivalente a a = a * b.
     /=: a /= b es equivalente a a = a / b.
     %=: a %= b es equivalente a a = a % b.
+  ```
 ### Incremento y decremento 
+  ```java
     ++: i++ es equivalente a i = i + 1.
     --: i-- es equivalente a i = i - 1.
   ```
+**Más sobre operadores en el recurso "Operadores en java"**
+
 ## Operaciones Matematicas en Java con Math 
   ```java
     Math.PI // 3.141592653589793
@@ -158,6 +240,59 @@ true o false. Su valor por default es false.
     // Volumen de una esfera ( (4/3) * PI * r^3):
     (4/3) * Math.PI * Math.pow(r, 3)
   ```
+## Conversión de tipos primitivos
+  ```java
+    public class HolaMundo {
+      public static void main(String args[]) {
+        //Convertir tipo String a un tipo int
+        var edad = Integer.parseInt("20");
+        //var edad = "20";
+        System.out.println("edad = " + (edad + 1));
+        
+        var valorPI = Double.parseDouble("3.1416");
+        System.out.println("valorPI = " + valorPI);
+        
+        //Pedir un valor 
+        //Integer.parseInt() - intenta tomar un valor de una cadena y convertirlo a un entero
+        var consola = new Scanner(System.in);
+        System.out.println("Proporciona tu edad:");
+        edad = Integer.parseInt( consola.nextLine() );
+        System.out.println("edad = " + edad);
+      }
+    }
+  ```
+Ahora un tipo int a un tipo String (inverso) mediante  String.valueOf(10); el cual convierte un tipo proporcionado a un tipo String 
+  ```java
+public class HolaMundo {
+    public static void main(String args[]) {
+        //Convertir tipo String a un tipo int
+        var edad = Integer.parseInt("20");
+        //var edad = "20";
+        System.out.println("edad = " + (edad + 1));
+        
+        var valorPI = Double.parseDouble("3.1416");
+        System.out.println("valorPI = " + valorPI);
+        
+        //Pedir un valor 
+        var consola = new Scanner(System.in);
+        //System.out.println("Proporciona tu edad:");
+        //edad = Integer.parseInt( consola.nextLine() );
+        //System.out.println("edad = " + edad);
+        
+        var edadTexto = String.valueOf(10);
+        System.out.println("edadTexto = " + edadTexto);
+        
+        //De tipo String a char
+        var caracter = "hola".charAt(1);
+        System.out.println("caracter = " + caracter);
+        //charAt(0) devuelve el caracter que allí solicital, sin embargo un valor de tipo entero no contiene este metodo solo toma los de tipo String
+        System.out.println("Proporciona un caracter:");
+        caracter = consola.nextLine().charAt(0);
+        System.out.println("caracter = " + caracter);
+      }
+    }
+  ```
+
 ## Cast en variables: Estimación y exactitud
 #### Estimación
   ```java

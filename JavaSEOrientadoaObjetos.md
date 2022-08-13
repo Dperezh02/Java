@@ -37,37 +37,36 @@ Las Clases son los modelos sobre los cuales construimos nuestros objetos, es dec
 ```
 Luego se debe de crear un constructor en la clase hijo que coincida con la clase padre, como se muestra acontinuación: 
 ```java
-public class Person {
-	int id;
-	int edad;
-    String nombre;
-    String apellido;
-    String sexo;
+    public class Person {
+        int id;
+        int edad;
+        String nombre;
+        String apellido;
+        String sexo;
 
-    public Person(int edad, String nombre, String apellido, String sexo) {
-        this.edad = edad;
-        this.nombre = nombre;
-        this.apellido = apellido;
-		this.sexo = sexo;
+        public Person(int edad, String nombre, String apellido, String sexo) {
+            this.edad = edad;
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.sexo = sexo;
+        }
     }
-}
 ```
 ```java
-public class Student extends Person{
-	String grado;
-    String nombreColegio;
+    public class Student extends Person{
+        String grado;
+        String nombreColegio;
 
-	//Metodo constructor en la clase hija que coincida con la clase padre
-    public Student(int edad, String nombre, String apellido, String sexo, String grado, String nombreColegio) {
-		//Super representara a la clase padre, super hara referencia a los atributos y metodos de la super clase
-		super(edad, nombre, apellido, sexo)
+        //Metodo constructor en la clase hija que coincida con la clase padre
+        public Student(int edad, String nombre, String apellido, String sexo, String grado, String nombreColegio) {
+            //Super representara a la clase padre, super hara referencia a los atributos y metodos de la super clase
+            super(edad, nombre, apellido, sexo)
 
-		//this. hara referencia a los atributos y metodos de la subclase
-        this.grado = grado;
-        this.nombreColegio = nombreColegio;
-    
+            //this. hara referencia a los atributos y metodos de la subclase
+            this.grado = grado;
+            this.nombreColegio = nombreColegio;
+        }
     }
-}
 ```
 ### ¿Como acceder a atributos de una clase padre en una clase hija?
 
