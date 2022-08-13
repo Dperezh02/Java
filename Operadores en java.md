@@ -1,6 +1,11 @@
 # Operadores 
 
 ## Operadores Aritmeticos
+ - (+) Para sumar, concatenar.  
+ - (-) Para restar.
+ - (*) Para multiplicar.
+ - (/) Para dividir.
+ - (%) Residuo de división, operador de módulo.
 ```java
   public static void main(String args[]) {
     int a=3, b=2;
@@ -26,6 +31,8 @@
   }
 ```
 ## Operadores Asignación Composición
+ - (=) Para asignar valor a una variable.  
+ - (==) Para comprobar si dos valores son iguales.(Operador de igualdad)
 ```java
   public static void main(String args[]) {
     int a = 3, b=2;
@@ -47,11 +54,13 @@
 ## Operadores Unarios
 ```java
   public static void main(String args[]) {
+    //Cambio de signo
     var a = 3;
     var b = -a;
     System.out.println("a = " + a);
     System.out.println("b = " + b);
     
+    //Operador de negaación (Aplica para tipos boolean)
     var c = true;
     var d = !c;
     System.out.println("c = " + c);
@@ -63,6 +72,7 @@
     var f = ++e;//primero se incrementa la variable y despues se usa su valor
     System.out.println("e = " + e);
     System.out.println("f = " + f);
+
     //2.postincremento (simbolo despues de la variable)
     var g = 5;
     var h = g++;//primero se utiliza el valor y despues se incrementa
@@ -84,6 +94,9 @@
   }
 ```
 ## Operadores Igualdad
+ - (==) Para comprobar si dos valores son iguales..  
+ - (!=) Para comprobar la igualdad de dos operandos. (Se le llama no igual).
+ - (.equals()) Para comparar contenido de cadenas.
 ```java
   public static void main(String args[]) {
     var a = 3;
@@ -105,6 +118,10 @@
   }
 ```
 ## Operador Relacional
+  - Menor que: <
+  - Mayor que: >
+  - Menor o igual que: <=
+  - Mayor o igual que: >=
 ```java
   public static void main(String args[]) {
     var a = 3;
@@ -144,6 +161,7 @@
   }
 ```
 ## Operadores Condicionales
+Estos operadores son **AND** (&&) y **OR** (||)
 ```java
   public static void main(String args[]) {
     var a = 8;
@@ -170,6 +188,8 @@
   }
 ```
 ## Operadores Ternario
+- (1 > 2) **?** "verdadero" **:** "falso"; 
+- "?" y ":" Separa lo verdadero de lo falso, este operador puede ser utilizado como un if solo si la condición es sencilla.
 ```java
   public static void main(String args[]) {
     var resultado = (1 > 2) ? "verdadero" : "falso";        
@@ -180,7 +200,8 @@
     System.out.println("resultado = " + resultado);
   }
 ```
-## PrecedenciaOperadores
+## Precedencia Operadores
+Depende del orden de los operadores aritmeticos y la importancia que se les de, el resultado va a ser diferente.
 ```java
   public static void main(String args[]) {
     var x = 5;

@@ -216,6 +216,27 @@ En esta página podemos encontrar la lista de Unicode characters.(https://en.wik
     ++: i++ es equivalente a i = i + 1.
     --: i-- es equivalente a i = i - 1.
   ```
+## Operadores logicos
+  ```java
+  Operadores de equidad:
+
+   - Igualdad: ==
+   - Desigualdad: !=
+
+  Operadores Relacionales:
+
+   - Menor que: <
+   - Mayor que: >
+   - Menor o igual que: <=
+   - Mayor o igual que: >=
+  
+  Operadores lógicos:
+
+   - &&: AND (evaluar si dos o más condiciones son verdaderas).
+   - ||: OR (evaluar si al menos una de las condiciones es verdadera).
+   - !: NOT (evaluar que la condición NO sea verdadera).
+  ```
+  ![I1](https://github.com/Dperezh02/Java/blob/master/Imagenes%20de%20referencia/Operadores%20logicos%20-%20tabla%20de%20la%20verdad.png) 
 **Más sobre operadores en el recurso "Operadores en java"**
 
 ## Operaciones Matematicas en Java con Math 
@@ -348,28 +369,6 @@ public class HolaMundo {
 
 ##### Las variables locales: Son las que se definen para un proceso en especifico en un funcion especifica y solo van a ser reconocidas para esa funcion o proceso, es decir que si intentamos hacer la llamada a una variable local en otra funcion que no sea la de origen no la reconocera como declarada.(USO PRIVATIZADO)
 ![I1](https://github.com/Dperezh02/Java/blob/master/Imagenes%20de%20referencia/Scope%20de%20las%20variables.png)
-
-## Operadores logicos
-  ```java
-  Operadores de equidad:
-
-   - Igualdad: ==
-   - Desigualdad: !=
-
-  Operadores Relacionales:
-
-   - Menor que: <
-   - Mayor que: >
-   - Menor o igual que: <=
-   - Mayor o igual que: >=
-  
-  Operadores lógicos:
-
-   - &&: AND (evaluar si dos o más condiciones son verdaderas).
-   - ||: OR (evaluar si al menos una de las condiciones es verdadera).
-   - !: NOT (evaluar que la condición NO sea verdadera).
-  ```
-  ![I1](https://github.com/Dperezh02/Java/blob/master/Imagenes%20de%20referencia/Operadores%20logicos%20-%20tabla%20de%20la%20verdad.png) 
 
 ## Estrucura if / else if 
   ```java
