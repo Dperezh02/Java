@@ -237,6 +237,7 @@ En esta página podemos encontrar la lista de Unicode characters.(https://en.wik
    - !: NOT (evaluar que la condición NO sea verdadera).
   ```
   ![I1](https://github.com/Dperezh02/Java/blob/master/Imagenes%20de%20referencia/Operadores%20logicos%20-%20tabla%20de%20la%20verdad.png) 
+
 **Más sobre operadores en el recurso "Operadores en java"**
 
 ## Operaciones Matematicas en Java con Math 
@@ -467,7 +468,15 @@ public class HolaMundo {
       //Instrucciones
     } while (condicion);
   ```
-#### Ejemplo:
+#### Ejemplo 1:
+  ```java
+    var contador = 0;
+        do {
+          System.out.println("contador = " + contador);
+          contador++;
+        } while (contador < 3);
+  ```
+#### Ejemplo 2:
   ```java
     int respuesta = 0;
 
@@ -503,7 +512,15 @@ public class HolaMundo {
     //instrucciones
   }
   ```
-#### Ejemplo:
+#### Ejemplo 1:
+  ```java
+    var contador = 0;
+        while ( contador < 3 ) {
+          System.out.println("contador = " + contador);
+          contador++;
+        }
+  ```
+#### Ejemplo 2:
   ```java
     int x = 1;
 
@@ -522,23 +539,51 @@ public class HolaMundo {
       //Instrucciones
     }
   ```
-#### Ejemplo
+#### Ejemplo 1:
   ```java
-    public static void main(String[] args) {
-          turnOnOffLight();
-
-          for (int i = 1; i <= 10; i++) {
-              
-          }
-      }
-      public static void printSOS(){
-          System.out.println(". . . _ _ _ . . .");
-      }
-      public static boolean turnOnOffLight(){
-          isTurnOnLight = (isTurnOnLight)?false:true;
-          return isTurnOnLight;
-      }
+    var contador = 0;
+        while ( contador < 3 ) {
+          System.out.println("contador = " + contador);
+          contador++;
+        }
   ```
+#### Ejemplo 2:
+  ```java
+    for( var contador = 0 ; contador < 3 ; contador++ ){
+      System.out.println("contador = " + contador);
+    }
+  ```
+### Palabras Break y Continue
+- Break: Rompe un ciclo.
+```java
+    for(var contador = 0 ; contador < 3 ; contador++){
+        if( contador % 2 == 0){
+            System.out.println("contador = " + contador);
+            break; //Al poner este break aqui estaremos rompiendo el ciclo y solo se va a ejecutar una vez, Si es número par, se imprime en consola pero ademas termina el ciclo, si se quita el break lo que sucede es que se imprimen todos los números pares.
+        }   
+    }
+```
+- Continue: Continuar a la sigiente iteración
+```java
+  for(var contador = 0 ; contador < 3 ; contador++){
+        if(contador % 2 != 0){
+            continue;//ir a la siguiente iteracion
+        }   
+        System.out.println("contador = " + contador);
+  }
+```
+### Uso de etiquetas 
+El manejo de etiquetas es simplemente agregar un texto, por ejemplo **Inicio**, utilizamos la palabra continue y posteriormente la palabra que hemos definido "Inicio", entonces en este caso en lugar de decir que vamos a la siguiente iteración le estamos diciendo que vamos a ir a la línea de código donde hemos puesto esa etiqueta, este uso de etiquetas puede ser de utilidad en ciclos for anidados, en otros casos no es común usarlo y para la palabra Break es lo mismo.
+```java
+  inicio:
+  for(var contador = 0 ; contador < 3 ; contador++){
+      if( contador % 2 != 0){
+          continue inicio;//ir a la linea de codigo de la etiqueta
+      }   
+      System.out.println("contador = " + contador);
+  }
+```
+Más, sin embargo, no es recomendable usar este tipo de programación 
 ## Arrays
 #### Los arreglos o arrays son objetos en los que podemos guardar más de una variable.
 #### Los arrays se definen en código de las siguientes maneras:
