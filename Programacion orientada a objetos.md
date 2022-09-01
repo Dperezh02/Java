@@ -11,9 +11,11 @@ La Abstracción se trata de analizar objetos de forma independiente, sus propied
 
 ![I1](https://github.com/Dperezh02/Java/blob/master/Imagenes%20de%20referencia/Abstracci%C3%B3n.png)
 
-### Clase - Objeto
-Ejemplo: Clase, instancia, objetos, comportamientos y atributos.
+### Atributos y métodos de una clase
+**Atributos:** se recomienda que esten definidos al principio de la clase 
+**Métodos:** es una parte de codigo que vamos a utilizar, lo podemos llamar tantas veces como sea necesario, un metodo puede recibir valores (Argumentos) y un método puede regresar tambien un valor (Valor de retorno)  
 
+Ejemplo: 
 ```java
   public class School {
     //Atributos de la clase
@@ -43,41 +45,32 @@ Ejemplo: Clase, instancia, objetos, comportamientos y atributos.
 
 ![I1](https://github.com/Dperezh02/Java/blob/master/Imagenes%20de%20referencia/Clases-Objetos.png)
 
-### Metodo Constructor 
-#### El Método Constructor es el primer método que se ejecuta por defecto cuando creamos una clase, nos permite crear nuevas instancias de una clase. Lo invocamos con la palabra reservada new seguida del nombre con el que inicializamos la clase y paréntesis.
-- Dar un estado inicial al objeto
-- Tiene el mismo nombre de la clase 
-- Son los parametros minimos que necesita un objeto para vivir 
-- En java el metodo puede no estar declarado por que el copilador de java siempre nos va a proveer un metodo constructor por defecto para todas las clases
-
-```java
-	// nombreDeLaInstancia = new MétodoConstructor();
-	myDoctor = new Doctor();
-```
-Ejemplo de como usarlo:
+### Objetos en java
+En el siguiente ejemplo se muestra una plantilla de persona, sin embargo no se ha definido sus atributos, para esto instanciamos objetos desde otra clase de prueba. 
 ```java
 public class Persona {
     //Atributos de la clase
     String nombre;
     String apellido;
-    
+
     //Metodos de la clase
     public void desplegarInformacion(){
         System.out.println("Nombre: " + nombre);
         System.out.println("Apellido: " + apellido);
     }
-    
 }
 ```
+Entonces creamos otra calse en donde allí se haran las pruebas y se instanciaran objetos apartir de la clase que hemos creado 
 ```java
 public class PruebaPersona {
     public static void main(String[] args) {
         Persona persona1 =  new Persona(); 
-        persona1.nombre = "Juan";
+        //Podemos ingresar a los metodos y atributos de la clase mediante un punto
+        persona1.nombre = "Juan";//Por medio del operador punto, estoy accediendo al atributo de nombre y por medio del operador de asignación modigfico el valor de la variable nombre y le asigno el valor de "Juan".
         persona1.apellido = "Perez";
-        persona1.desplegarInformacion();
+        persona1.desplegarInformacion();//Por medio del operador punto, estoy accediendo al metodo de la clase.
         
-        Persona persona2 = new Persona();
+        Persona persona2 = new Persona();//Por defecto java nos genera un metodo constructor vacio para poder instanciar un objeto.
         
         System.out.println("persona1 = " + persona1);
         System.out.println("persona2 = " + persona2);
@@ -89,7 +82,17 @@ public class PruebaPersona {
     }
 }
 ```
+### Metodo Constructor 
+#### El Método Constructor es el primer método que se ejecuta por defecto cuando creamos una clase, nos permite crear nuevas instancias de una clase. Lo invocamos con la palabra reservada new seguida del nombre con el que inicializamos la clase y paréntesis.
+- Dar un estado inicial al objeto
+- Tiene el mismo nombre de la clase 
+- Son los parametros minimos que necesita un objeto para vivir 
+- En java el metodo puede no estar declarado por que el copilador de java siempre nos va a proveer un metodo constructor por defecto para todas las clases
 
+```java
+	//VariableDeTipoDoctor nombreDeLaInstancia = new MétodoConstructor();
+	Doctor myDoctor = new Doctor();
+```
 ### Aplicando herencia en lenguaje Java
 ```java
 	//La calse Studen (Clase Hija) Extiende o hereda de la clase Person (Extiende de una clase padre)
